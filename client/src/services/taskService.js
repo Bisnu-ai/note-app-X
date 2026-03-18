@@ -1,4 +1,4 @@
-const API_BASE_URL ="http://localhost:8000/api";
+const API_BASE_URL ="http://51.21.161.249:8000/api";
 
 class TaskService {
   async getAllTasks() {
