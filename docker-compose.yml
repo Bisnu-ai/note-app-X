@@ -1,4 +1,4 @@
-# Two services: backend API on 5000, frontend (nginx) on 80
+# Two services: backend API on 8000, frontend (nginx) on 80
 services:
   backend:
     build: ./server
