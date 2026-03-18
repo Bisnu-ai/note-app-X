@@ -8,6 +8,10 @@ on:
   pull_request:
     branches: [main, dev]
 
+
+env:
+  FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
+
 # define a job (multiple jobs also)
 jobs:
   build-and-lint:
@@ -15,10 +19,10 @@ jobs:
 
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v4        # ✅ v3 → v4
+        uses: actions/checkout@v4        # ✅ v4
 
       - name: Setup Node
-        uses: actions/setup-node@v4      # ✅ v3 → v4
+        uses: actions/setup-node@v4      # ✅ v4
         with:
           node-version: 20
 
@@ -50,7 +54,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout (optional)
-        uses: actions/checkout@v4        # Already v4 
+        uses: actions/checkout@v4        # ✅ v4
 
       - name: Add EC2 host to known_hosts
         run: |
@@ -85,5 +89,3 @@ jobs:
 
             docker compose ps
           EOF
-
-
